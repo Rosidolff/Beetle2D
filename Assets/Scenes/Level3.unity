@@ -945,15 +945,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   torqueAmount: 30
   flapForce: 30
-  dustEffect: {fileID: 298714676}
   scoreManager: {fileID: 830391861}
+  dustEffect: {fileID: 298714676}
   flapEffect: {fileID: 474909148}
   windEffect: {fileID: 549345006}
   charactersFly: {fileID: 777576210}
   charactersGround: {fileID: 1545753989}
   centerOfMassHeight: 0.1
-  maxAngularVelocity: 250
-  landingStabilizer: 0.2
   flyDelay: 0.2
 --- !u!114 &191432754
 MonoBehaviour:
@@ -14570,6 +14568,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 593113912}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1058842406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.47481
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.60655
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635976206987924069, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
 --- !u!1001 &1085343013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18085,3 +18140,4 @@ SceneRoots:
   - {fileID: 1478051949}
   - {fileID: 1918325464}
   - {fileID: 905393778}
+  - {fileID: 1058842406}

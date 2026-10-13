@@ -1019,15 +1019,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   torqueAmount: 30
   flapForce: 30
-  dustEffect: {fileID: 298714676}
   scoreManager: {fileID: 830391861}
+  dustEffect: {fileID: 298714676}
   flapEffect: {fileID: 474909148}
   windEffect: {fileID: 549345006}
   charactersFly: {fileID: 777576210}
   charactersGround: {fileID: 1545753989}
-  centerOfMassHeight: 0.1
-  maxAngularVelocity: 250
-  landingStabilizer: 0.2
+  centerOfMassHeight: 0.2
   flyDelay: 0.2
 --- !u!114 &191432754
 MonoBehaviour:
@@ -1077,7 +1075,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.20556831, y: 1.6445541}
+  m_Offset: {x: -0.35163116, y: 1.6445541}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1087,7 +1085,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.2270012, y: 2.0792408}
+  m_Size: {x: 4.018997, y: 2.0792408}
   m_EdgeRadius: 0
 --- !u!58 &191432756
 CircleCollider2D:
@@ -1099,7 +1097,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: bb577f309595b344da171ed14eeed1a3, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17462,7 +17460,7 @@ SurfaceEffector2D:
   m_SpeedVariation: 0
   m_ForceScale: 1
   m_UseContactForce: 0
-  m_UseFriction: 1
+  m_UseFriction: 0
   m_UseBounce: 1
 --- !u!68 &2050724104
 EdgeCollider2D:
@@ -18085,6 +18083,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4665326562080623083, guid: 0b9c6b1b2a4b6874289dfac2ee40c46c, type: 3}
   m_PrefabInstance: {fileID: 2136930822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2304710173514283071
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.47481
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.60655
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894835541942554708, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635976206987924069, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8dbeef58037ab1439c821c79377886d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -18101,3 +18156,4 @@ SceneRoots:
   - {fileID: 1478051949}
   - {fileID: 1918325464}
   - {fileID: 905393778}
+  - {fileID: 2304710173514283071}
