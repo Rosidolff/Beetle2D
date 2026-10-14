@@ -46,11 +46,8 @@ public class PlayerController : MonoBehaviour
     {
         // Activate the selected character model
         int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
-        for (int i = 0; i < charactersFly.transform.childCount; i++)
-        {
-            charactersFly.transform.GetChild(i).gameObject.SetActive(i == selectedCharacter);
-            charactersGround.transform.GetChild(i).gameObject.SetActive(i == selectedCharacter);
-        }
+        charactersFly.transform.GetChild(selectedCharacter).gameObject.SetActive(true);
+        charactersGround.transform.GetChild(selectedCharacter).gameObject.SetActive(true);
 
         moveAction = InputSystem.actions.FindAction("Move");
         rb = GetComponent<Rigidbody2D>();
@@ -64,7 +61,6 @@ public class PlayerController : MonoBehaviour
         rb.centerOfMass = ballCenter + new Vector2(0, centerOfMassHeight);
 
         // The player starts in the air until the ball touches the floor
-        timeInAir = flyDelay;
         SetCharacterSprites(false);
     }
 
@@ -81,11 +77,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // FixedUpdate is called at a fixed rate, in sync with the physics
-    // Torque is applied here so it doesn't depend on the frame rate
+    // Torque is applied here so it doesn't depend on the frame rate 
+    //Update it is not enough it crash imediately forward when the player press forward, so we use FixedUpdate to apply the torque 
+    // more fluidly.
     void FixedUpdate()
     {
         if (!canControlPlayer) return;
-
         PlayerTorque();
     }
 
@@ -152,18 +149,20 @@ public class PlayerController : MonoBehaviour
 
         if (wingsSpeed > 0)
         {
-            // If the ball is on the floor and no key is pressed, let the physics follow the slope
+            // If the player has the wings power-up, wich means no gravity so the velocity in vertical direction is controlled by the up and down arrow keys, and the player can move up and down freely
             if (moveInput.y != 0 || !isGrounded)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, moveInput.y * wingsSpeed);
             }
         }
+        // If the player doesn't have the wings power-up, allow flapping only when the up arrow key is pressed
         else if (upPressed && !upWasPressed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, flapForce); // Same vertical speed in every flap
             flapEffect.Play();
         }
 
+        //with this avoid long presses of the up arrow key, so the player can only flap once per press.
         upWasPressed = upPressed; // Update the previous state for the next frame
     }
 
